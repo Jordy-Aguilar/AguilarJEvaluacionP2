@@ -3,19 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AguilarJEvaluacionP2.GridLayout"
              BackgroundColor="White"
-            Title="Datos Personales">
-    <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
-        <Label Text="Jordy A "
-              Grid.Row="0" Grid.Column="0"
-              Style="{StaticResource NombreStyle}" />
+             Title="Datos Personales">
+    <Grid RowDefinitions="*,*"
+          ColumnDefinitions="*,*">
+        <!-- Primer cuadrante: Nombre 1 -->
+        <Label Text="Jordy A"
+               Grid.Row="0" Grid.Column="0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource NombreStyle}" />
+
+        <!-- Segundo cuadrante: Nombre 2 -->
         <Label Text="Enrique A"
-              Grid.Row="0" Grid.Column="1"
-              Style="{StaticResource NombreStyle}" />
+               Grid.Row="0" Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource NombreStyle}" />
+
+        <!-- Tercer cuadrante: Apellido 1 -->
         <Label Text="Aguilar"
-              Grid.Row="1" Grid.Column="0"
-              Style="{StaticResource ApellidoStyle}" />
+               Grid.Row="1" Grid.Column="0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource ApellidoStyle}" />
+
+        <!-- Cuarto cuadrante: Apellido 2 -->
         <Label Text="Yaure"
-              Grid.Row="1" Grid.Column="1"
-              Style="{StaticResource ApellidoStyle}" />
+               Grid.Row="1" Grid.Column="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource ApellidoStyle}" />
     </Grid>
 </ContentPage>
