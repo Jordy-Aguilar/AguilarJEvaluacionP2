@@ -7,9 +7,12 @@
     Shell.FlyoutBehavior="Disabled"
     Title="AguilarJEvaluacionP2">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
 
+        <ShellContent Title="Recargas"
+                     ContentTemplate="{DataTemplate local:StackLayout}" />
+
+        <ShellContent Title="Datos Personales"
+                     ContentTemplate="{DataTemplate local:GridLayout}" />
+    </TabBar>
 </Shell>

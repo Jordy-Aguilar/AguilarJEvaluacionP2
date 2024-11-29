@@ -1,25 +1,33 @@
-﻿namespace AguilarJEvaluacionP2
+﻿using System;
+using System.IO;
+using Microsoft.Maui.Controls;
+namespace AguilarJEvaluacionP2
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnButtonClicked(object sender, EventArgs e)
         {
-            count++;
+            string nombre = "Jordy Enrique";
+            string apellido = "Aguilar Yaure";
+            string folderName = nombre + apellido;
+            string folderPath = Path.Combine(FileSystem.AppDataDirectory, folderName);
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            string fileName = folderName + ".txt";
+            string filePath = Path.Combine(folderPath, fileName);
+            string recargaInfo = "Información de la recarga: $100.00\nFecha: " + DateTime.Now;
+
+            await File.WriteAllTextAsync(filePath, recargaInfo);
+            await DisplayAlert("Éxito", "La información se ha guardado " + filePath, "OK");
         }
     }
-
 }
