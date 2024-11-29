@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AguilarJEvaluacionP2.StackLayout"
+             BackgroundColor="White"
+            Title="Recarga Telefónica">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+            <Label Text="Recargas"
+                  FontSize="28"
+                  TextColor="red"
+                  FontAttributes="Bold"
+                  HorizontalOptions="Center" />
+            <Label Text="Ingrese el número de teléfono al que desea realizar la recarga:"
+                  FontSize="18"
+                  TextColor="Black" />
+            <Entry x:Name="Numero_JAguilar"
+                  Placeholder="Número telefónico"
+                  Keyboard="Numeric"
+                  FontSize="16"
+                  TextColor="Black"
+                  BackgroundColor="#EDEDED"
+                  HorizontalOptions="FillAndExpand" />
+            <Label Text="Ingrese su nombre:"
+                  FontSize="18"
+                  TextColor="Black"/>
+            <Entry x:Name="Nombre_JAguilar"
+                  Placeholder="Nombre de usuario"
+                  FontSize="16"
+                  TextColor="Black"
+                  BackgroundColor="#EDEDED"
+                  HorizontalOptions="FillAndExpand"/>
+            <Label x:Name="Resumen_JAguilar"
+                  Text="Seleccione una recarga para obtener mas informacion"
+                  FontSize="16"
+                  TextColor="Purple"
+                  HorizontalOptions="Center" />
+            <Button x:Name="JBtn_Recargar_JAguilar"
+                   Text="Recargar"
+                   FontSize="18"
+                   BackgroundColor="red"
+                   TextColor="White"
+                   CornerRadius="10"
+                   HorizontalOptions="FillAndExpand"
+                   Clicked="JBtn_Recargar_Click" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
